@@ -6,3 +6,6 @@ class Student(models.Model):
     age = models.IntegerField()
     email = models.EmailField()
     contact = models.IntegerField()
+
+    def __str__(self):
+        return f"{self.name} ({self.email})"
