@@ -3,16 +3,11 @@ from django.db import models
 # Create your models here.
 
 class login(models.Model):
-    username = models.CharField(max_length=100)
+    email = models.EmailField()
     password = models.CharField(max_length=100)
-    user = User.objects.create_user(username='your_username', password='your_password')
-    user.save()
-
-    # login = Login(user=user)
-    # login.save()
-
+    logins = login.objects.create(email='email', password='password')
     def __str__(self):
-        return f"{self.username} ({self.password})"
+        return f"{self.email} ({self.password})"
 
 class Student(models.Model):    
     name = models.CharField(max_length=100)

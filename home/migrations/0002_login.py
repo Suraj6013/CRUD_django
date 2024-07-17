@@ -18,4 +18,11 @@ class Migration(migrations.Migration):
                 ('password', models.CharField(max_length=100)),
             ],
         ),
+
+        migrations.AddField(
+            model_name='login',
+            name='email',
+            field=models.EmailField(default='example@example.com', max_length=254),
+        ),
     ]
+

@@ -17,6 +17,9 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from home.views import *
+from home.models import login  # Ensure correct import path
+
+admin.site.register(login)
 
 urlpatterns = [    
     path('' , home , name='home'),
