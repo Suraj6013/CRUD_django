@@ -5,7 +5,7 @@ from django.db import models
 class login(models.Model):
     email = models.EmailField()
     password = models.CharField(max_length=100)
-    logins = login.objects.create(email='email', password='password')
+    
     def __str__(self):
         return f"{self.email} ({self.password})"
 
